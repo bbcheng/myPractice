@@ -1,0 +1,11 @@
+class zx 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("Hello World!");
+		System.out.println(6&3);	//与
+		System.out.println(6|5);	//活
+		System.out.println(6^5);	//异或
+		System.out.println(~6);		//反
+	}
+}

@@ -1,0 +1,25 @@
+/**
+×ø×Å
+*/
+
+public class demo
+{
+	/*public static void main(String[] arg)
+	{
+	System.out.println("hello world");
+	}*/
+
+	static 
+	{
+		System.out.println("zc");		
+		System.exit(0);
+	}
+	
+
+	demo p = new demo();
+}
+
+class p
+{
+	public static void main(String[] args){}
+}

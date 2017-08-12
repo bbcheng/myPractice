@@ -1,0 +1,9 @@
+class zhijie 
+{
+	public static void main(String[] args) 
+	{
+		System.out.println("输入年垃圾总量");
+		System.in.println(int x);
+		System.out.println(x);
+	}
+}
