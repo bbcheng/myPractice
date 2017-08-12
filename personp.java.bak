@@ -1,0 +1,52 @@
+class person
+{
+	private int age = 10;
+	private String name;
+
+	{
+		System.out.println("构造代码块");
+	}
+	person()
+	{
+		System.out.println("name="+name+":::age="+age);
+	}
+	static person(String name)
+	{
+		this.name = name;
+		System.out.println("name="+name+":::age="+age);
+	}
+	person(String name,int age)
+	{
+		this.name = name;
+		this.age = age;
+		System.out.println("name="+name+" and age="+age);
+	}
+	static 
+	{
+		System.out.println("静态代码块");
+	}
+}
+
+class personp
+{
+	public static void main(String[] args) 
+	{
+		person p = new person("zc",18);	
+		person p2 = new person("gg");	
+	}
+}
+
+/*
+person p = new person("zc",18);	
+
+这句话都做了什么事情？
+1.因为new用到了person.class。所以会先找到person.class文件并加载到内存中。
+2.执行该类中的static代码块，如果有的话，给person.class类进行初始化。
+3.在堆内存中开辟空间，分配内存地址。
+4.在堆内存中建立对象的特有属性，并进行默认初始化。
+5.对属性进行显示初始化。
+6.对对象进行构造代码块初始化。
+7.对对象进行对应的构造函数初始化。
+8.将内存地址赋给栈内存中的p变量。
+
+*/

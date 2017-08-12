@@ -1,0 +1,76 @@
+/*
+构造函数：函数名与类名相同，不用定义返回值类型，不可以写return语句。
+	作用：给对象进行初始化
+	多个构造函数是以重载的形式存在的。
+当一个类中没有定义构造函数时，系统就会默认给该类加入一个空参数的构造函数。
+
+对象一建立，构造函数只能被调用一次，而一般函数可以被多次调用。
+*/
+
+class person1
+{
+	private String name;				
+	private int age;
+	person1()				//函数的重载，参数列表不同。
+	{
+		System.out.println("A: name = "+name+",,,age = "+age);
+		cry();
+	}
+
+	person1(String n)		//函数的重载，参数列表不同。
+	{
+		name = n;
+		System.out.println("B: name = "+name+",,,age = "+age);
+		cry();
+	}
+
+	person1(String n,int a)	//函数的重载，参数列表不同。
+	{
+		name = n;
+		age = a;
+		System.out.println("C: name = "+name+",,,age = "+age);
+		cry();
+	}
+
+	public void cry()
+	{
+		System.out.println("cry..........");	
+	}
+
+	public void setName(String n)	//外部可以传一个名字，该函数无返回值。
+	{
+		name = n;
+	}
+
+	public String  getName()		//返回传进来的这个名字。返回值类型为String。
+	{
+		return name;
+	}
+}
+
+
+
+
+class gouzao 
+{
+	public static void main(String[] args) 
+	{
+	//	person1 p = new person1();// 对象一建立，就调用构造函数。只能调用一次。
+	//	new person1();			//所以构造函数可以用于给对象进行初始化。
+	//	p.person1();	//非法语句。
+
+	//	person1 p1 = new person1();
+	//	p1.cry();
+
+		person1 p2 = new person1("zczczccz");	//建立对象，只调用一次构造函数
+												//而一般函数可以被多次调用。(g)setName					
+		p2.setName("lisi");						//传一个名字
+		System.out.println(p2.getName());		//getName没有打印功能。
+	//	System.out.println(p2.setName("ohuo"));	//setName函数没有返回值，故该语句非法。
+		p2.setName("ohuo");
+		System.out.println(p2.getName());
+
+	//	person1 p3 = new person1("gggg",15);
+
+	}
+}
